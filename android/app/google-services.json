@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "693851962175",
+    "project_id": "nwhacks-project-bad12",
+    "storage_bucket": "nwhacks-project-bad12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693851962175:android:d272562378b961ad85318a",
+        "android_client_info": {
+          "package_name": "io.nwhacks.detect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693851962175-03ajnb33v4gs8lmp26dcevg5jmp2cnsg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.nwhacks.detect",
+            "certificate_hash": "4ce5c9419067408d4b3aff5bab3dbe755bf09416"
+          }
+        },
+        {
+          "client_id": "693851962175-59fjm6bm46nrtd4gejhme03bdpf7g9k4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd5j7ntcOsjS38CPg0HKWE8k7yBfyu2DY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693851962175-59fjm6bm46nrtd4gejhme03bdpf7g9k4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
