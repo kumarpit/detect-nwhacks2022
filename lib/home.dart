@@ -16,17 +16,20 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       _imageFile = File(photo!.path);
     });
+
+    if (_imageFile != null) {
+      _cropImage();
+    }
   }
 
   Future<void> _cropImage() async {
     File? cropped = await ImageCropper.cropImage(
         sourcePath: _imageFile!.path,
-        aspectRatio: CropAspectRatio(ratioX: 1, ratioY: 1),
+        // aspectRatio: CropAspectRatio(ratioX: 1, ratioY: 1),
         compressQuality: 100,
-        maxWidth: 700,
-        maxHeight: 700,
         compressFormat: ImageCompressFormat.jpg,
-        androidUiSettings: AndroidUiSettings(showCropGrid: true));
+        androidUiSettings: AndroidUiSettings(
+            hideBottomControls: true, lockAspectRatio: false));
     setState(() {
       _imageFile = cropped ?? _imageFile;
     });
@@ -39,19 +42,11 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Row(
         children: <Widget>[
           IconButton(onPressed: _captureImage, icon: Icon(Icons.photo_camera)),
-          IconButton(onPressed: _cropImage, icon: Icon(Icons.crop))
         ],
       )),
       body: ListView(
         children: <Widget>[
-          if (_imageFile != null) ...[
-            Image.file(File(_imageFile!.path)),
-            Row(
-              children: <Widget>[
-                IconButton(onPressed: _cropImage, icon: Icon(Icons.crop))
-              ],
-            )
-          ]
+          if (_imageFile != null) ...[Image.file(File(_imageFile!.path))]
         ],
       ),
     );
