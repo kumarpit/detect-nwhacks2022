@@ -24,3 +24,6 @@ Deetect efficiently scans a ingredient list and compares it against our internal
 
 ### Techstack
 We used this nwHacks to learn new technologies and this was the first time we used _Flutter, Firebase and Google ML Kit_.
+
+### Our Exerpience
+This was the first hackathon we attended and we spent quite a lot of time ideating and setting up our project. In the end, we have a basic working product but did't have the time to implement the designs from Figma. This hackathon was a tremendous learning experience and has given us a great base to extend on for this project.
