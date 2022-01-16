@@ -1,3 +1,4 @@
+import 'image_banner.dart';
 import 'package:flutter/material.dart';
 
 class DangerScreen extends StatelessWidget {
@@ -6,7 +7,16 @@ class DangerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text("Danger"),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          ImageBanner("lib/images/8b.3.png")
+        ],
+      )
     );
   }
 }

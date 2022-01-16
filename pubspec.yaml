@@ -45,3 +45,6 @@ flutter:
   #   - assets/
   #   - assets/covers/
   #   - assets/congrats.gif
+
+  assets:
+    - lib/assets/images/
