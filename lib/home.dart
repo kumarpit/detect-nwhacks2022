@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:detect/ingredients.dart';
 import 'package:detect/models/text_model.dart';
 import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';
@@ -41,9 +42,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   extract(String path) async {
     List<RecognizedText> text = await getText(path);
-    text.forEach((element) {
-      print(element.block);
-    });
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (BuildContext context) =>
+            IngredientScreen(extractedText: text)));
   }
 
   @override
