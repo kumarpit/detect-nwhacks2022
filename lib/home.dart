@@ -1,7 +1,9 @@
 import 'dart:io';
+import 'package:detect/models/text_model.dart';
 import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:detect/ml-kit/google_ml_kit.dart';
 
 class HomeScreen extends StatefulWidget {
   createState() => _HomeScreenState();
@@ -32,6 +34,15 @@ class _HomeScreenState extends State<HomeScreen> {
             hideBottomControls: true, lockAspectRatio: false));
     setState(() {
       _imageFile = cropped ?? _imageFile;
+    });
+
+    extract(_imageFile!.path);
+  }
+
+  extract(String path) async {
+    List<RecognizedText> text = await getText(path);
+    text.forEach((element) {
+      print(element.block);
     });
   }
 
